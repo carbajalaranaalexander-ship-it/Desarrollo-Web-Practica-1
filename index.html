@@ -1,0 +1,137 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Página Principal</title>
+  <style>
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      min-height: 100vh;
+      background: linear-gradient(145deg, #111827, #1f2937);
+      font-family: Arial, Helvetica, sans-serif;
+      color: #fff;
+      display: grid;
+      place-items: center;
+      padding: 30px 18px;
+    }
+
+    .container {
+      width: min(980px, 100%);
+      text-align: center;
+    }
+
+    h1 {
+      margin-bottom: 26px;
+      letter-spacing: 0.4px;
+    }
+
+    .cards {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 18px;
+    }
+
+    .card-link {
+      text-decoration: none;
+      color: inherit;
+      perspective: 1000px;
+      width: min(280px, 100%);
+    }
+
+    .card {
+      position: relative;
+      width: 100%;
+      height: 180px;
+      transform-style: preserve-3d;
+      transition: transform 650ms ease;
+    }
+
+    .card-link:hover .card {
+      transform: rotateY(180deg);
+    }
+
+    .face {
+      position: absolute;
+      inset: 0;
+      border-radius: 14px;
+      display: grid;
+      place-items: center;
+      backface-visibility: hidden;
+      border: 1px solid rgba(255, 255, 255, 0.2);
+      box-shadow: 0 10px 26px rgba(0, 0, 0, 0.35);
+      background-size: cover;
+      background-position: center;
+      overflow: hidden;
+    }
+
+    .face::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background: rgba(0, 0, 0, 0.42);
+    }
+
+    .face h2 {
+      position: relative;
+      z-index: 1;
+      margin: 0;
+      font-size: 1.7rem;
+      text-transform: lowercase;
+      letter-spacing: 0.4px;
+    }
+
+    .card-link:nth-child(1) .front,
+    .card-link:nth-child(1) .back {
+      background-image: url("https://images.unsplash.com/photo-1498050108023-c5249f4df085?auto=format&fit=crop&w=900&q=80");
+    }
+
+    .card-link:nth-child(2) .front,
+    .card-link:nth-child(2) .back {
+      background-image: url("https://images.unsplash.com/photo-1518773553398-650c184e0bb3?auto=format&fit=crop&w=900&q=80");
+    }
+
+    .card-link:nth-child(3) .front,
+    .card-link:nth-child(3) .back {
+      background-image: url("https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=900&q=80");
+    }
+
+    .back {
+      transform: rotateY(180deg);
+    }
+
+    .back h2 {
+      transform: rotateY(180deg);
+    }
+  </style>
+</head>
+<body>
+  <main class="container">
+    <h1>Página Principal</h1>
+    <section class="cards">
+      <a class="card-link" href="page1.html">
+        <article class="card">
+          <div class="face front"><h2>page1</h2></div>
+          <div class="face back"><h2>page1</h2></div>
+        </article>
+      </a>
+
+      <a class="card-link" href="page2.html">
+        <article class="card">
+          <div class="face front"><h2>page2</h2></div>
+          <div class="face back"><h2>page2</h2></div>
+        </article>
+      </a>
+
+      <a class="card-link" href="page3.html">
+        <article class="card">
+          <div class="face front"><h2>page3</h2></div>
+          <div class="face back"><h2>page3</h2></div>
+        </article>
+      </a>
+    </section>
+  </main>
+</body>
+</html>
