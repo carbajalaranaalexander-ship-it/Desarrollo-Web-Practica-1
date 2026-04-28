@@ -1,0 +1,119 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>page03</title>
+  <style>
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      font-family: Arial, Helvetica, sans-serif;
+      color: #1f2937;
+      background: #f3f6fa;
+    }
+
+    .hero {
+      background: linear-gradient(125deg, #172554, #1d4ed8);
+      color: #fff;
+      padding: 42px 20px;
+      text-align: center;
+    }
+
+    .hero h1 { margin: 0 0 8px; font-size: clamp(1.6rem, 3vw, 2.4rem); }
+    .hero p { margin: 0; opacity: 0.9; }
+
+    .container {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 24px 20px 36px;
+      display: flex;
+      justify-content: center;
+    }
+
+    .main {
+      flex: 1 1 100%;
+      background: #fff;
+      border-radius: 14px;
+      padding: 18px;
+      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.06);
+    }
+
+    .main h2 { margin: 0 0 10px; color: #0f172a; }
+    .main p { color: #334155; line-height: 1.55; }
+
+    .gallery {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+      margin-top: 14px;
+    }
+
+    .gallery img {
+      width: calc(33.333% - 8px);
+      border-radius: 10px;
+      object-fit: cover;
+      height: 160px;
+      transition: opacity 180ms ease;
+      opacity: 0.9;
+    }
+
+    .gallery img:hover { opacity: 1; }
+
+    @media (max-width: 479px) {
+      .hero { padding: 30px 14px; }
+      .container { padding: 18px 12px 28px; gap: 14px; }
+      .gallery img { width: 100%; height: 170px; }
+    }
+
+    @media (min-width: 480px) and (max-width: 899px) {
+      .container { max-width: 860px; }
+      .gallery img { width: calc(50% - 6px); }
+    }
+
+    @media (min-width: 900px) and (max-width: 1199px) {
+      .container { max-width: 1080px; }
+      .gallery img {
+        width: calc(33.333% - 8px);
+        height: 170px;
+      }
+    }
+
+    @media (min-width: 1200px) {
+      .container { max-width: 1200px; }
+      .gallery img {
+        width: calc(33.333% - 8px);
+        height: 180px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header class="hero">
+    <h1>Diseño Responsivo con Flexbox</h1>
+    <p>Distribución de texto, fondo, colores e imágenes con diferentes resoluciones.</p>
+  </header>
+
+  <main class="container">
+    <section class="main">
+      <h2>Contenido Principal</h2>
+      <p>
+        Esta sección representa una composición tipo revista digital. Incluye bloques
+        de texto y una galería de imágenes con efecto de opacidad al pasar el cursor,
+        además de estructura flexible para distintos anchos de pantalla.
+      </p>
+      <div class="gallery">
+        <img src="https://images.unsplash.com/photo-1482192596544-9eb780fc7f66?auto=format&fit=crop&w=900&q=80" alt="Ciudad">
+        <img src="https://images.unsplash.com/photo-1469474968028-56623f02e42e?auto=format&fit=crop&w=900&q=80" alt="Montañas">
+        <img src="https://images.unsplash.com/photo-1493244040629-496f6d136cc3?auto=format&fit=crop&w=900&q=80" alt="Lago">
+        <img src="https://images.unsplash.com/photo-1501785888041-af3ef285b470?auto=format&fit=crop&w=900&q=80" alt="Bosque">
+        <img src="https://images.unsplash.com/photo-1470770841072-f978cf4d019e?auto=format&fit=crop&w=900&q=80" alt="Campo">
+        <img src="https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?auto=format&fit=crop&w=900&q=80" alt="Cielo">
+        <img src="https://images.unsplash.com/photo-1433838552652-f9a46b332c40?auto=format&fit=crop&w=900&q=80" alt="Río">
+        <img src="https://images.unsplash.com/photo-1426604966848-d7adac402bff?auto=format&fit=crop&w=900&q=80" alt="Montaña nevada">
+        <img src="https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=900&q=80" alt="Playa">
+      </div>
+    </section>
+  </main>
+</body>
+</html>
